@@ -1,0 +1,260 @@
+<template>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <!-- Coluna da esquerda -->
+      <div class="col-12 col-md-2 mb-4 text-center mt-4">
+        <!-- Seção de pesquisa e filtros -->
+        <div class="search-section p-3 mb-4 shadow-sm rounded">
+          <form class="d-flex flex-column" role="search">
+            <input class="form-control mb-3" type="search" placeholder="Pesquisar conversas" aria-label="Search">
+          </form>
+          <button type="button" class="btn btn-outline-primary btn-block mb-2 btn-sm">Abertas</button>
+          <button type="button" class="btn btn-outline-primary btn-block mb-2 btn-sm">Fechadas</button>
+        </div>
+
+        <!-- Seção de contatos -->
+        <div class="contact-sidebar">
+          <div class="contact-header">
+            <h5>Contatos</h5>
+          </div>
+          <div class="contact-list">
+            <div class="contact-item">
+              <img src="https://via.placeholder.com/40" alt="Foto do Contato" class="contact-img">
+              <span class="contact-name">João Silva</span>
+            </div>
+            <div class="contact-item">
+              <img src="https://via.placeholder.com/40" alt="Foto do Contato" class="contact-img">
+              <span class="contact-name">Maria Oliveira</span>
+            </div>
+            <div class="contact-item">
+              <img src="https://via.placeholder.com/40" alt="Foto do Contato" class="contact-img">
+              <span class="contact-name">Pedro Santos</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna do meio -->
+      <div class="col-12 col-md-8">
+        <!-- Barra de navegação -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded shadow-sm mt-4">
+          <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand font-weight-bold" href="#">Nome Cliente</a>
+            <div class="d-flex align-items-center">
+              <button type="button" class="btn btn-outline-primary"><i class="bi bi-tag-fill"></i> Tag</button>
+              <button type="button" class="btn btn-outline-primary"><i class="bi bi-pass-fill"></i> Criar Ticket</button>
+              <button type="button" class="btn btn-outline-primary"><i class="bi bi-box-arrow-right"></i> Encerrar</button>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Mensagens -->
+        <div class="mensagens mt-4">
+          <div class="mensagem bg-light shadow-sm rounded p-3 mb-3">
+            <p>Esta é uma mensagem do cliente</p>
+          </div>
+          <div class="mensagem bg-primary text-white shadow-sm rounded p-3 mb-3">
+            <p>Esta é uma resposta</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna da direita -->
+      <div class="col-12 col-md-2 text-center mt-4">
+        <img src="https://img.freepik.com/fotos-premium/personagem-de-desenho-animado-masculino-isolado-no-fundo-branco_922771-1411.jpg?w=360" class="img-thumbnail rounded-circle mb-3 shadow-sm" alt="Imagem do cliente">
+        <button class="btn btn-outline-secondary btn-block mt-4 btn-sm" type="button"><i class="bi bi-person-vcard"></i> Detalhes</button>
+        <button class="btn btn-outline-secondary btn-block mt-4 btn-sm" type="button"><i class="bi bi-chat-dots"></i> Últimas Conversas</button>
+        <button class="btn btn-outline-secondary btn-block mt-4 btn-sm" type="button"><i class="bi bi-pass-fill"></i> Últimos Tickets</button>
+        <button class="btn btn-outline-secondary btn-block mt-4 btn-sm" type="button"><i class="bi bi-chat-right-quote"></i> Eventos da Conversa</button>
+        <button class="btn btn-outline-secondary btn-block mt-4 btn-sm" type="button"><i class="bi bi-diagram-3"></i> Fluxo de Navegação</button>
+      </div>
+    </div>
+
+    <!-- Mensagens no rodapé -->
+    <div class="tab-section">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+            <i class="bi bi-chat-fill"></i> Mensagens
+          </button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+            <i class="bi bi-stickies-fill"></i> Anotações
+          </button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+          <div class="card">
+            <div class="card-body">
+              Suas mensagens
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+          <div class="card">
+            <div class="card-body">
+              Suas anotações
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<style scoped>
+body {
+  background-color: #f8f9fa;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mensagem {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 8px;
+}
+
+.img-thumbnail {
+  width: 60%;
+  height: auto;
+}
+
+.search-section {
+  border: 2px solid  rgb(13, 110, 253); 
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-control {
+  border-radius: 20px;
+}
+
+button {
+  border-radius: 20px;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+}
+
+.tab-section {
+  border: 2px solid #000000;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; 
+  max-width: 900px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* sombra nas mensagem */
+}
+
+.btn-outline-primary {
+  border-color:  rgb(13, 110, 253);
+  color:  rgb(13, 110, 253);
+}
+
+.btn-outline-primary:hover {
+  background-color: rgb(13, 110, 253);
+  color: #fff;
+}
+
+.btn-outline-secondary {
+  border-color: rgb(13, 110, 253);
+  color: rgb(13, 110, 253);
+}
+
+.btn-outline-secondary:hover {
+  background-color:  rgb(13, 110, 253);
+  color: #fff;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.contact-sidebar {
+  width: 100%; 
+  max-height: calc(100vh - 40px); /* Ajustar altura máxima */
+  overflow-y: auto;
+  border: 2px solid rgb(13, 110, 253);
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1; 
+}
+
+.contact-header {
+  border-bottom: 1px solidrgb(13, 110, 253);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.contact-item:hover {
+  background-color: #008cff;
+}
+
+.contact-img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.contact-name /* nome dos contatos */ {
+  font-size: 1rem;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .mensagem {
+    max-width: 100%;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .btn-block {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+</style>
+
